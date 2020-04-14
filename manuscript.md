@@ -56,11 +56,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/7471ec29b79f7ee7be96dec5075a2f50f5efc5ec/" />
+  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/11cc1445a0f9427cd1d44522bc19e30ae65598f9/" />
 
-  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/7471ec29b79f7ee7be96dec5075a2f50f5efc5ec/" />
+  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/11cc1445a0f9427cd1d44522bc19e30ae65598f9/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/7471ec29b79f7ee7be96dec5075a2f50f5efc5ec/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/11cc1445a0f9427cd1d44522bc19e30ae65598f9/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -92,9 +92,9 @@ title: Extension of Roles in the ChEBI Ontology
 
 <small><em>
 This manuscript
-([permalink](https://chemical-roles.github.io/manuscript/v/7471ec29b79f7ee7be96dec5075a2f50f5efc5ec/))
+([permalink](https://chemical-roles.github.io/manuscript/v/11cc1445a0f9427cd1d44522bc19e30ae65598f9/))
 was automatically generated
-from [chemical-roles/manuscript@7471ec2](https://github.com/chemical-roles/manuscript/tree/7471ec29b79f7ee7be96dec5075a2f50f5efc5ec)
+from [chemical-roles/manuscript@11cc144](https://github.com/chemical-roles/manuscript/tree/11cc1445a0f9427cd1d44522bc19e30ae65598f9)
 on April 14, 2020.
 </em></small>
 
@@ -116,21 +116,21 @@ on April 14, 2020.
 
 ## Motivation {.page_break_before}
 
-The Chemical Entities of Biological Interest (ChEBI [@pmid:23180789]) ontology models chemicals, their classes,
-their roles, and their interrelations (Figure 1, left). While many roles correspond to how their substituent chemicals
-affect proteins, protein families, protein complexes, pathways, pathologies, or organisms, this information is
+The Chemical Entities of Biological Interest (ChEBI) [@pmid:23180789] ontology models chemicals, their classes,
+their roles, and their interrelations ({@fig:overview}, left). While many roles correspond to how their substituent
+chemicals affect proteins, protein families, protein complexes, pathways, pathologies, or organisms, this information is
 unstructured. Yan et al. (2011) previously described how these correspondences could be theoretically formalized.
 This article proposes a concrete schema and axioms through which these roles can be linked to their target entities
-(Figure 1, right), a suite of open source, reusable curation tools, and ultimately a manually curated database of
+({@fig:overview}, right), a suite of open source, reusable curation tools, and ultimately a manually curated database of
 relationships between chemical roles and their targets. 
 
-![ Schema for inference of chemicals' relations to targets via roles.
+![Schema for inference of chemicals' relations to targets via roles.
 Targets may be other chemicals, proteins, protein families, protein
-complexes, pathways, pathologies, or organisms.](images/overview.svg){#fig:1}
+complexes, pathways, pathologies, or organisms.](images/overview.svg){#fig:overview}
 
 Throughout this article, the term role (in the context of the ChEBI ontology) will be used in the colloquial sense
-described by Batchelor et al. (2010) rather than the formal sense prescribed by the Basic Formal Ontology
-(Smith et al., 2005).
+described by Batchelor *et al.* [@isbn:9781607505341] rather than the formal sense prescribed by the
+Basic Formal Ontology [@isbn:9781607505341].
 
 
 ## References {.page_break_before}
