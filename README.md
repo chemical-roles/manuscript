@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/chemical-roles/manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://chemical-roles.github.io/manuscript/>.
-The permalink for this webpage version is <https://chemical-roles.github.io/manuscript/v/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23/>.
+The permalink for this webpage version is <https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://chemical-roles.github.io/manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23`](https://github.com/chemical-roles/manuscript/commit/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23).
+[`50b1388471c98d96d8fe6d89ffeab5a44f6cb919`](https://github.com/chemical-roles/manuscript/commit/50b1388471c98d96d8fe6d89ffeab5a44f6cb919).
