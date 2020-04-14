@@ -1,22 +1,37 @@
 [
-{
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
-      ]
+  {
+    "id": "ying2011",
+    "type": "paper-conference",
+    "title": "Use of multiple ontologies to characterize the bioactivity of small molecules",
+    "event": "International Conference on Biomedical Ontology",
+    "event-place": "Buffalo, NY, USA",
+    "abstract": "ChEBI is an ontology of biologically interesting chemicals. Biological activities of chemical entities comprise interactions with biological entities such as proteins and anatomical structures such as the cell membrane. Currently. ChEBI represents these biological activities of small molecules within a 'role' ontology which includes terms such as 'cyclooxygenase inhibitor'. However, this 'role' ontology is not complete, and is not directly interlinked with the biological ontologies which serve as the main source of concepts describing biological entities. This makes it difficult to reason over the relationships between chemical entities and their biological targets. To address this issue, we propose a model for interrelating multiple ontologies and controlled vocabularies in the biomedical domain in order to formally characterise the bioactivity of small molecules. In support of this work, we have developed a method for analysing the scientific literature for textual descriptions of bioactivity events linked to chemical entities. We examine the distribution of terms from various controlled vocabularies (biological processes, proteins, organisms and organ/body parts) in combination with the chemical entities in the literature, to better understand reports of bioactivity. We find that proteins are the most commonly reported type of target of small molecule bioactivity, and that organisms and organs are most commonly reported in the literature as locational constraints rather than as targets.",
+    "URL": "http://ceur-ws.org/Vol-833/paper68.pdf",
+    "author": [
+      {
+        "family": "Ying",
+        "given": "Yan"
+      },
+      {
+        "family": "Hastings",
+        "given": "Janna"
+      },
+      {
+        "family": "Kim",
+        "given": "Jee-Hyub"
+      },
+      {
+        "family": "Schulz",
+        "given": "Stefan"
+      },
+      {
+        "family": "Steinbeck",
+        "given": "Christoph"
+      },
+      {
+        "family": "Rebholz-Schuhmann",
+        "given": "Dietrich"
+      }
     ]
-  },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+  }
 ]
