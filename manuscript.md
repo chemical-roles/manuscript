@@ -56,11 +56,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23/" />
+  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/" />
 
-  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23/" />
+  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -92,9 +92,9 @@ title: Extension of Roles in the ChEBI Ontology
 
 <small><em>
 This manuscript
-([permalink](https://chemical-roles.github.io/manuscript/v/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23/))
+([permalink](https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/))
 was automatically generated
-from [chemical-roles/manuscript@e4f9ca7](https://github.com/chemical-roles/manuscript/tree/e4f9ca7878d01d53e6fa61160ee0d5fa405c8f23)
+from [chemical-roles/manuscript@50b1388](https://github.com/chemical-roles/manuscript/tree/50b1388471c98d96d8fe6d89ffeab5a44f6cb919)
 on April 14, 2020.
 </em></small>
 
@@ -131,6 +131,13 @@ complexes, pathways, pathologies, or organisms.](images/overview.svg){#fig:overv
 Throughout this article, the term role (in the context of the ChEBI ontology) will be used in the colloquial sense
 described by Batchelor *et al.* [@isbn:9781607505341] rather than the formal sense prescribed by the
 Basic Formal Ontology [@doi:10.3233/AO-160164; @arxiv:1502.04108].
+
+
+## Extension of the ChEBI Schema
+
+Before generalizing the rules for the relationships between targets, it is best to examine a specific example. Chemicals that have the role *p53 activator* [@url:https://identifiers.org/CHEBI:77731] obviously affect a certain target. The type of effect is directly activates (RO:0002406). The type of the target is protein. The target itself is the protein encoded by the *TP53* [@url:https://identifiers.org/hgnc:11998] gene. Because the chemical CBL0137 [@url:https://identifiers.org/CHEBI:138650] has the role *p53 activator*, it can be inferred that *CBL0137 directly activates TP53*. 
+
+While Yan *et al.* exemplified the formalization of the relationship between roles from the ChEBI ontology and their targets using the Manchester syntax, this article will only informally describe axioms. It is intended that these descriptions are easily understandable such that the focus can remain on the practical utility of the relations curated and inferred during the work described here. The following informal amalgamation of a shape expression (common to graph query languages like SPARQL) and propositional logic outlines how to infer if a chemical C is an activator of protein P given it has the role R and role R is related to the activation of protein P.
 
 
 ## References {.page_break_before}
