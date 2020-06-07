@@ -11,7 +11,7 @@ linked to their target entities, a suite of open source, reusable curation tools
 and ultimately a manually curated database of relationships between chemical roles
 and their targets.
 
-All code and data is available at https://github.com/cthoyt/chemical-relations under
+All code and data is available at https://github.com/chemical-roles/chemical-roles under
 the MIT License for code and CC0 for curated content.
 
 ## Manubot
