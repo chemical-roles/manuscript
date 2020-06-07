@@ -3,7 +3,7 @@ author-meta:
 - Charles Tapley Hoyt
 bibliography:
 - content/manual-references.json
-date-meta: '2020-04-14'
+date-meta: '2020-06-07'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Extension of Roles in the ChEBI Ontology" />
 
-  <meta name="dc.date" content="2020-04-14" />
+  <meta name="dc.date" content="2020-06-07" />
 
-  <meta name="citation_publication_date" content="2020-04-14" />
+  <meta name="citation_publication_date" content="2020-06-07" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -56,11 +56,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/" />
+  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/1384990ea0c087343f8f7f5f549f69bf49076112/" />
 
-  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/" />
+  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/1384990ea0c087343f8f7f5f549f69bf49076112/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/1384990ea0c087343f8f7f5f549f69bf49076112/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -92,10 +92,10 @@ title: Extension of Roles in the ChEBI Ontology
 
 <small><em>
 This manuscript
-([permalink](https://chemical-roles.github.io/manuscript/v/50b1388471c98d96d8fe6d89ffeab5a44f6cb919/))
+([permalink](https://chemical-roles.github.io/manuscript/v/1384990ea0c087343f8f7f5f549f69bf49076112/))
 was automatically generated
-from [chemical-roles/manuscript@50b1388](https://github.com/chemical-roles/manuscript/tree/50b1388471c98d96d8fe6d89ffeab5a44f6cb919)
-on April 14, 2020.
+from [chemical-roles/manuscript@1384990](https://github.com/chemical-roles/manuscript/tree/1384990ea0c087343f8f7f5f549f69bf49076112)
+on June 7, 2020.
 </em></small>
 
 ## Authors
@@ -135,7 +135,7 @@ Basic Formal Ontology [@doi:10.3233/AO-160164; @arxiv:1502.04108].
 
 ## Extension of the ChEBI Schema
 
-Before generalizing the rules for the relationships between targets, it is best to examine a specific example. Chemicals that have the role *p53 activator* [@url:https://identifiers.org/CHEBI:77731] obviously affect a certain target. The type of effect is directly activates (RO:0002406). The type of the target is protein. The target itself is the protein encoded by the *TP53* [@url:https://identifiers.org/hgnc:11998] gene. Because the chemical CBL0137 [@url:https://identifiers.org/CHEBI:138650] has the role *p53 activator*, it can be inferred that *CBL0137 directly activates TP53*. 
+Before generalizing the rules for the relationships between targets, it is best to examine a specific example. Chemicals that have the role *p53 activator* [@url:https://identifiers.org/CHEBI:77731] obviously affect a certain target. The type of effect is directly activates [@url:http://purl.obolibrary.org/obo/RO_0002406]. The type of the target is protein. The target itself is the protein encoded by the *TP53* [@url:https://identifiers.org/hgnc:11998] gene. Because the chemical CBL0137 [@url:https://identifiers.org/CHEBI:138650] has the role *p53 activator*, it can be inferred that *CBL0137 directly activates TP53*. 
 
 While Yan *et al.* exemplified the formalization of the relationship between roles from the ChEBI ontology and their targets using the Manchester syntax, this article will only informally describe axioms. It is intended that these descriptions are easily understandable such that the focus can remain on the practical utility of the relations curated and inferred during the work described here. The following informal amalgamation of a shape expression (common to graph query languages like SPARQL) and propositional logic outlines how to infer if a chemical C is an activator of protein P given it has the role R and role R is related to the activation of protein P.
 
