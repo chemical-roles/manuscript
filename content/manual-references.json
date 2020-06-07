@@ -33,5 +33,9 @@
         "given": "Dietrich"
       }
     ]
+  },
+  {
+    "id":  "url:https://identifiers.org/CHEBI:77731",
+    "title": "p53 activator"
   }
 ]
