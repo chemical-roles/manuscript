@@ -7,8 +7,8 @@ content/01.abstract.md:15:ChEBI
 content/01.abstract.md:16:Batchelor
 content/01.abstract.md:17:arxiv
 content/02.extension.md:1:ChEBI
-content/02.extension.md:3:CHEBI
-content/02.extension.md:3:CHEBI
-content/02.extension.md:5:ChEBI
-content/02.extension.md:5:SPARQL
-content/02.extension.md:5:Yan
+content/02.extension.md:4:chebi
+content/02.extension.md:7:chebi
+content/02.extension.md:9:ChEBI
+content/02.extension.md:9:Yan
+content/02.extension.md:11:SPARQL

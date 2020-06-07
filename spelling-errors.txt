@@ -3,7 +3,6 @@ Batchelor
 CBL
 ChEBI
 cthoyt
-cthoytp
 curation
 Hoyt
 pathologies
