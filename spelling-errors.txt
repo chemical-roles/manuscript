@@ -5,7 +5,7 @@ aminobutyric
 antiglaucoma
 antihyperplasia
 antihypotensive
-Arrythmia
+arrythmia
 arxiv
 aryl
 autophagy
@@ -17,7 +17,7 @@ BEL
 cannabinoid
 catabolism
 CBL
-CHEBI
+ChEBI
 ChEBI’s
 ChIRO
 chrismungall
@@ -27,7 +27,7 @@ Colluru
 correspondsTo
 CTH
 cthoyt
-Curation
+curation
 cyclase
 DDF
 ddomingof
