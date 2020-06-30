@@ -13,7 +13,7 @@ axiomatization
 axiomatized
 axiomize
 Batchelor
-BEL
+bel
 cannabinoid
 catabolism
 CBL
@@ -72,7 +72,7 @@ MTP
 Mungall
 NADPH
 nicolevasilevsky
-OBO
+obo
 oborel
 ODK
 ontologies
