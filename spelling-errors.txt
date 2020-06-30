@@ -13,7 +13,7 @@ axiomatization
 axiomatized
 axiomize
 Batchelor
-bel
+BEL
 cannabinoid
 catabolism
 CBL
