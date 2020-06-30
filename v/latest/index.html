@@ -69,13 +69,13 @@
   <meta name="citation_fulltext_html_url" content="https://chemical-roles.github.io/manuscript/" />
   <meta name="citation_pdf_url" content="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/" />
-  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/" />
+  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/chemical-roles/manuscript/raw/c9bc952e02833be54f463a7885016e43a2c879ae/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/chemical-roles/manuscript/raw/c9bc952e02833be54f463a7885016e43a2c879ae/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/chemical-roles/manuscript/raw/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/chemical-roles/manuscript/raw/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -87,9 +87,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/">permalink</a>)
+(<a href="https://chemical-roles.github.io/manuscript/v/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/chemical-roles/manuscript/tree/c9bc952e02833be54f463a7885016e43a2c879ae">chemical-roles/manuscript@c9bc952</a>
+from <a href="https://github.com/chemical-roles/manuscript/tree/a98e3972e9e2e772daeb42bbc9faf33d2b1f889a">chemical-roles/manuscript@a98e397</a>
 on June 30, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -154,7 +154,7 @@ Ying <em>et al.</em> <span class="citation" data-cites="eRyiaiyT">[<a href="#ref
 This article proposes a concrete schema and axioms through which these roles can be linked to their target entities (Figure <a href="#fig:overview">1</a>, right), a suite of open source, reusable curation tools, and ultimately a manually curated database of relationships between chemical roles and their targets.</p>
 <div id="fig:overview" class="fignos">
 <figure>
-<img src="images/figure_1_overview.svg" style="width:75.0%" alt="" /><figcaption><span>Figure 1:</span> Schema for inference of chemicals’ relations to targets via roles. Targets may be other chemicals, proteins, protein families, protein complexes, pathways, pathologies, or organisms.</figcaption>
+<img src="images/figure_1_overview.svg" style="width:90.0%" alt="" /><figcaption><span>Figure 1:</span> Schema for inference of chemicals’ relations to targets via roles. Targets may be other chemicals, proteins, protein families, protein complexes, pathways, pathologies, or organisms.</figcaption>
 </figure>
 </div>
 <p>Throughout this article, the term <em>role</em> (in the context of the ChEBI ontology) will be used in the colloquial sense described by Batchelor <em>et al.</em> <span class="citation" data-cites="xAEGNNS7">[<a href="#ref-xAEGNNS7" role="doc-biblioref">4</a>]</span> rather than the formal sense prescribed by the Basic Formal Ontology <span class="citation" data-cites="et8tgu7d 18TVi2Y1q">[<a href="#ref-et8tgu7d" role="doc-biblioref">5</a>,<a href="#ref-18TVi2Y1q" role="doc-biblioref">6</a>]</span>.</p>
@@ -168,7 +168,6 @@ Because the chemical CBL0137 <span class="citation" data-cites="Z4NIl1QS">[<a hr
 <p>While Ying <em>et al.</em> <span class="citation" data-cites="eRyiaiyT">[<a href="#ref-eRyiaiyT" role="doc-biblioref">3</a>]</span> exemplified the formalization of the relationship between roles from the ChEBI ontology and their targets using the Manchester syntax<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> to convey OWL-DL, this article will only informally describe axioms.
 It is intended that these descriptions are easily understandable such that the focus can remain on the practical utility of the relations curated and inferred during the work described here.
 The following informal amalgamation of a shape expression (common to graph query languages like SPARQL) and predicate logic outlines how to infer if a chemical <strong>C</strong> is an activator of protein <strong>P</strong> given it has the role <strong>R</strong> and role <strong>R</strong> is related to the activation of protein <strong>P</strong>.</p>
-<p>{.page_break_before}</p>
 <div id="tbl:table-1" class="tablenos">
 <table>
 <caption><span>Table 1:</span> Shape expression and predicate logic rules for inferring chemicals that activate proteins linked to a given role (could be stated more concisely in OWL as <em>has_role o role_for_directly_activates -&gt; directly_activates</em>). </caption>
@@ -708,8 +707,8 @@ GitHub<br />
 </div>
 <div id="ref-62wYWRNT">
 <p>50. <strong>chemical-roles/chemical-roles</strong> <br />
-Chemical Roles<br />
-(2020-06-24) <a href="https://github.com/chemical-roles/chemical-roles">https://github.com/chemical-roles/chemical-roles</a></p>
+GitHub<br />
+<a href="https://github.com/chemical-roles/chemical-roles">https://github.com/chemical-roles/chemical-roles</a></p>
 </div>
 <div id="ref-z7UPMWC1">
 <p>51. <strong>pyobo/pyobo</strong> <br />
@@ -742,8 +741,8 @@ DOI: <a href="https://doi.org/10.1186/s13326-017-0126-0">10.1186/s13326-017-0126
 </div>
 <div id="ref-15Qajtku">
 <p>57. <strong>INCATools/ontology-development-kit</strong> <br />
-INCATools<br />
-(2020-06-15) <a href="https://github.com/INCATools/ontology-development-kit">https://github.com/INCATools/ontology-development-kit</a></p>
+GitHub<br />
+<a href="https://github.com/INCATools/ontology-development-kit">https://github.com/INCATools/ontology-development-kit</a></p>
 </div>
 <div id="ref-EcSZMNp4">
 <p>58. <strong>obophenotype/chiro</strong> <br />
@@ -874,11 +873,11 @@ DOI: <a href="https://doi.org/10.5281/zenodo.3883800">10.5281/zenodo.3883800</a>
 <h2 id="appendix">Appendix</h2>
 <div id="tbl:affixes" class="tablenos">
 <table>
-<caption><span>Table 9:</span> Affixes used for initial targeted curation. In the first column, P corresponds to prefix, S to suffix, and A to both in the case of “EC-…-inhibitor/activator”. </caption>
+<caption><span>Table 9:</span> Affixes used for initial targeted curation. </caption>
 <colgroup>
-<col style="width: 1%" />
-<col style="width: 7%" />
-<col style="width: 91%" />
+<col style="width: 4%" />
+<col style="width: 10%" />
+<col style="width: 85%" />
 </colgroup>
 <thead>
 <tr class="header">
