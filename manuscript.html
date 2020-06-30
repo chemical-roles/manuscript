@@ -69,13 +69,13 @@
   <meta name="citation_fulltext_html_url" content="https://chemical-roles.github.io/manuscript/" />
   <meta name="citation_pdf_url" content="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://chemical-roles.github.io/manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/d0017e20f66ca5886d9fc5e608d962365c514e7d/" />
-  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/d0017e20f66ca5886d9fc5e608d962365c514e7d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/d0017e20f66ca5886d9fc5e608d962365c514e7d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/" />
+  <meta name="manubot_html_url_versioned" content="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/" />
+  <meta name="manubot_pdf_url_versioned" content="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/chemical-roles/manuscript/raw/d0017e20f66ca5886d9fc5e608d962365c514e7d/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/chemical-roles/manuscript/raw/d0017e20f66ca5886d9fc5e608d962365c514e7d/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/chemical-roles/manuscript/raw/c9bc952e02833be54f463a7885016e43a2c879ae/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/chemical-roles/manuscript/raw/c9bc952e02833be54f463a7885016e43a2c879ae/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -87,9 +87,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://chemical-roles.github.io/manuscript/v/d0017e20f66ca5886d9fc5e608d962365c514e7d/">permalink</a>)
+(<a href="https://chemical-roles.github.io/manuscript/v/c9bc952e02833be54f463a7885016e43a2c879ae/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/chemical-roles/manuscript/tree/d0017e20f66ca5886d9fc5e608d962365c514e7d">chemical-roles/manuscript@d0017e2</a>
+from <a href="https://github.com/chemical-roles/manuscript/tree/c9bc952e02833be54f463a7885016e43a2c879ae">chemical-roles/manuscript@c9bc952</a>
 on June 30, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -168,6 +168,7 @@ Because the chemical CBL0137 <span class="citation" data-cites="Z4NIl1QS">[<a hr
 <p>While Ying <em>et al.</em> <span class="citation" data-cites="eRyiaiyT">[<a href="#ref-eRyiaiyT" role="doc-biblioref">3</a>]</span> exemplified the formalization of the relationship between roles from the ChEBI ontology and their targets using the Manchester syntax<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> to convey OWL-DL, this article will only informally describe axioms.
 It is intended that these descriptions are easily understandable such that the focus can remain on the practical utility of the relations curated and inferred during the work described here.
 The following informal amalgamation of a shape expression (common to graph query languages like SPARQL) and predicate logic outlines how to infer if a chemical <strong>C</strong> is an activator of protein <strong>P</strong> given it has the role <strong>R</strong> and role <strong>R</strong> is related to the activation of protein <strong>P</strong>.</p>
+<p>{.page_break_before}</p>
 <div id="tbl:table-1" class="tablenos">
 <table>
 <caption><span>Table 1:</span> Shape expression and predicate logic rules for inferring chemicals that activate proteins linked to a given role (could be stated more concisely in OWL as <em>has_role o role_for_directly_activates -&gt; directly_activates</em>). </caption>
@@ -373,7 +374,7 @@ Therefore, the shape expression from Table <a href="#tbl:table-2">2</a> can be e
 <p>However, we have a number of hierarchical resources besides proteins, and sometimes these resources are several levels deep.
 Additionally, chemicals and roles both have their own hierarchies by ChEBI.
 In Table <a href="#tbl:table-6">6</a>, the <code>a*</code> notation is to show variable length traversals through “is a” relationships.
-This means if <code>A a B</code> and <code>B a C</code>, then A a* C is true. This holds for chains of arbitrary length.
+This means if <code>A a B</code> and <code>B a C</code>, then <code>A a* C</code> is true. This holds for chains of arbitrary length.
 In the context of the <code>a*</code> operator, it is also true that <code>A a A</code>.
 Finally, Table <a href="#tbl:table-6">6</a> presents a fully generalized inference framework.</p>
 <div id="tbl:table-6" class="tablenos">
@@ -443,10 +444,10 @@ Like in the first example where relation m between role <strong>R</strong> and t
 </table>
 </div>
 <h3 id="implementation">Implementation</h3>
-<p>The acquisition of external resources and inference over hierarchies is accomplished by a simple script whose installation and execution is mediated by the Tox <span class="citation" data-cites="EEOG2hnv">[<a href="#ref-EEOG2hnv" role="doc-biblioref">49</a>]</span> configuration available at https://github.com/chemical-roles/chemical-roles.
-It relies heavily on the PyOBO Python package <span class="citation" data-cites="z7UPMWC1">[<a href="#ref-z7UPMWC1" role="doc-biblioref">50</a>]</span> to acquire hierarchical data sources from OBO Foundry and generate OBO-like structures for several other resources, notably HGNC, GO, InterPro, etc.</p>
+<p>The acquisition of external resources and inference over hierarchies is accomplished by a simple script whose installation and execution is mediated by the Tox <span class="citation" data-cites="EEOG2hnv">[<a href="#ref-EEOG2hnv" role="doc-biblioref">49</a>]</span> configuration available on GitHub at <span class="citation" data-cites="62wYWRNT">[<a href="#ref-62wYWRNT" role="doc-biblioref">50</a>]</span>.
+It relies heavily on the PyOBO Python package <span class="citation" data-cites="z7UPMWC1">[<a href="#ref-z7UPMWC1" role="doc-biblioref">51</a>]</span> to acquire hierarchical data sources from OBO Foundry and generate OBO-like structures for several other resources, notably HGNC, GO, InterPro, etc.</p>
 <h3 id="summary-statistics-1">Summary Statistics</h3>
-<p>Inference over entity hierarchies resulted in over 424K new relationships.
+<p>Inference over entity hierarchies resulted in over 425K new relationships.
 Figure <a href="#fig:inference-summary">6</a> summarizes them by modulation and target entity type.
 Notice that each has increased by several orders of magnitude essentially for free by leveraging a vast amount of previously curated, high quality content.</p>
 <div id="fig:inference-summary" class="fignos">
@@ -458,20 +459,20 @@ Notice that each has increased by several orders of magnitude essentially for fr
 <p>While the manually curated and inferred relations arising from this work are distributed in a simple format appropriate for wide reuse, we highlight two use cases below.</p>
 <h3 id="uptake-by-chiro-and-obo">Uptake by ChIRO and OBO</h3>
 <p>One of the goals of OBO is to facilitate modular ontology development, and provide a set of richly interlinked ontologies.
-For example, many ontologies such as GO and HPO are axiomatized using ChEBI <span class="citation" data-cites="Wq2niICH">[<a href="#ref-Wq2niICH" role="doc-biblioref">51</a>]</span> for example, gliotoxin catabolism <span class="citation" data-cites="Z3v18E4Q">[<a href="#ref-Z3v18E4Q" role="doc-biblioref">52</a>]</span> has-input some gliotoxin <span class="citation" data-cites="x8ztKRsa">[<a href="#ref-x8ztKRsa" role="doc-biblioref">53</a>]</span>.
+For example, many ontologies such as GO and HPO are axiomatized using ChEBI <span class="citation" data-cites="Wq2niICH">[<a href="#ref-Wq2niICH" role="doc-biblioref">52</a>]</span> for example, gliotoxin catabolism <span class="citation" data-cites="Z3v18E4Q">[<a href="#ref-Z3v18E4Q" role="doc-biblioref">53</a>]</span> has-input some gliotoxin <span class="citation" data-cites="x8ztKRsa">[<a href="#ref-x8ztKRsa" role="doc-biblioref">54</a>]</span>.
 ChEBI is not itself axiomatized in this way.
 The ChIRO ontology was originally created as an overlay on top of ChEBI to provide this additional level of linkage.
 This provides multiple advantages - users interested in concepts such as Arrythmia <span class="citation" data-cites="71V60RCr">[<a href="#ref-71V60RCr" role="doc-biblioref">34</a>]</span> in HPO can navigate to the drugs that exacerbate or inhibit it.
-In particular, the use of axioms that connect from ChEBI back to GO allow for pathway queries when used in combination with GO-CAMs <span class="citation" data-cites="akdxNohe">[<a href="#ref-akdxNohe" role="doc-biblioref">54</a>]</span>, for example reasoning from a gene that is upstream of a process that regulates biosynthesis of a particular chemical that itself acts as an inhibitor of another GO activity.
-A workflow has been developed using Dead Simple OWL Design Patterns (DOSDP) <span class="citation" data-cites="1EG14g1C7">[<a href="#ref-1EG14g1C7" role="doc-biblioref">55</a>]</span>​ and the Ontology Development Kit ​(ODK) <span class="citation" data-cites="15Qajtku">[<a href="#ref-15Qajtku" role="doc-biblioref">56</a>]</span>.
+In particular, the use of axioms that connect from ChEBI back to GO allow for pathway queries when used in combination with GO-CAMs <span class="citation" data-cites="akdxNohe">[<a href="#ref-akdxNohe" role="doc-biblioref">55</a>]</span>, for example reasoning from a gene that is upstream of a process that regulates biosynthesis of a particular chemical that itself acts as an inhibitor of another GO activity.
+A workflow has been developed using Dead Simple OWL Design Patterns (DOSDP) <span class="citation" data-cites="1EG14g1C7">[<a href="#ref-1EG14g1C7" role="doc-biblioref">56</a>]</span>​ and the Ontology Development Kit ​(ODK) <span class="citation" data-cites="15Qajtku">[<a href="#ref-15Qajtku" role="doc-biblioref">57</a>]</span>.
 DOSDPs are a generic framework that allows for generation of OWL terms and axioms using specific patterns.
 The patterns are represented in a YAML file and contain slots for variables such as chemical classes from ChEBI.
 The specific fillers for each variable in the pattern are represented as rows in a tab-separated values (TSV) file, which are then run through a pipeline via the ODK to generate new terms that include logical axioms that were specified by the pattern, that can be subsequently imported into the ontology.
-Examples from ChIRO can be found at https://github.com/obophenotype/chiro/tree/master/src/patterns.</p>
+Examples from ChIRO can be found on GitHub at <span class="citation" data-cites="EcSZMNp4">[<a href="#ref-EcSZMNp4" role="doc-biblioref">58</a>]</span>.</p>
 <h3 id="conversion-to-the-biological-expression-language">Conversion to the Biological Expression Language</h3>
-<p>The Biological Expression Language (BEL) <span class="citation" data-cites="LQwD4jIG">[<a href="#ref-LQwD4jIG" role="doc-biblioref">57</a>]</span> is a domain specific language (DSL) for storing rich biomedical relations, supporting data integration <span class="citation" data-cites="mZ5zqhmN">[<a href="#ref-mZ5zqhmN" role="doc-biblioref">58</a>]</span>.
+<p>The Biological Expression Language (BEL) <span class="citation" data-cites="LQwD4jIG">[<a href="#ref-LQwD4jIG" role="doc-biblioref">59</a>]</span> is a domain specific language (DSL) for storing rich biomedical relations, supporting data integration <span class="citation" data-cites="mZ5zqhmN">[<a href="#ref-mZ5zqhmN" role="doc-biblioref">60</a>]</span>.
 The relationships curated and inferred in this work have a one-to-one correspondence with BEL statements as described in Table <a href="#tbl:table-bel">8</a>.
-The internal BEL DSL in the PyBEL software package <span class="citation" data-cites="oqV8WUtS">[<a href="#ref-oqV8WUtS" role="doc-biblioref">59</a>]</span> was used to implement a conversion that is included with each export.</p>
+The internal BEL DSL in the PyBEL software package <span class="citation" data-cites="oqV8WUtS">[<a href="#ref-oqV8WUtS" role="doc-biblioref">61</a>]</span> was used to implement a conversion that is included with each export.</p>
 <div id="tbl:table-bel" class="tablenos">
 <table>
 <caption><span>Table 8:</span> Mapping of relationships to BEL statements. </caption>
@@ -499,7 +500,7 @@ The internal BEL DSL in the PyBEL software package <span class="citation" data-c
 </div>
 <h2 id="concluding-remarks">Concluding Remarks</h2>
 <p>This article identified an area of improvement in the ChEBI ontology, presented a schema for curating that data, scripts for assisting in curation, and ultimately a curated database of role-modulation-target triples.
-It also presented an informal framework for inference and an implementation for doing that inference. The results of curation and inference are both available directly through the GitHub repository at https://github.com/chemical-roles/chemical-roles.</p>
+It also presented an informal framework for inference and an implementation for doing that inference. The results of curation and inference are both available directly on GitHub at <span class="citation" data-cites="62wYWRNT">[<a href="#ref-62wYWRNT" role="doc-biblioref">50</a>]</span>.</p>
 <p>Like with most curation, this work is not complete. Curation will continue using the procedures described until exhaustion - about another 800 roles remain.
 It would also be advantageous to generalize this curation technique from the roles in ChEBI to the roles in MeSH, a resource notorious for its lack of cross-references with other public biological data sources.
 Several examples have already been included in the database, an ontology of chemicals from PubChem and MeSH pharmacological roles similar to ChEBI’s is available through the PubChem FTP server<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> that enable similar inference to that presented here.</p>
@@ -508,9 +509,9 @@ It was not designed to compete with ChEBI or ChIRO, but rather to complement and
 A future goal is to automate the upload of the results to WikiData through a bot to bolster their chemical data integration efforts.
 Most importantly is to enable the ChEBI curators and the greater OBO community to best intake these relations into their ontologies and inference frameworks to benefit their work.</p>
 <h2 id="resource-availability">Resource Availability</h2>
-<p>All code used in the curation workflow is available at https://github.com/chemical-roles/chemical-roles under the MIT License.
-All manually curated data comprising the database are also available at https://github.com/chemical-roles/chemical-roles under the CC0 License.
-All code and data are archived on Zenodo at https://doi.org/10.5281/zenodo.3883800.</p>
+<p>All code used in the curation workflow is available on GitHub at <span class="citation" data-cites="62wYWRNT">[<a href="#ref-62wYWRNT" role="doc-biblioref">50</a>]</span> under the MIT License.
+All manually curated data comprising the database are also available on GitHub at <span class="citation" data-cites="62wYWRNT">[<a href="#ref-62wYWRNT" role="doc-biblioref">50</a>]</span> under the CC0 License.
+All code and data are archived on Zenodo at <span class="citation" data-cites="4bupWs1X">[<a href="#ref-4bupWs1X" role="doc-biblioref">62</a>]</span>.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>This work would not have been possible without the work done by the excellent team of curators and maintainers of ChEBI, especially Janna Hastings and Adnan Malik.</p>
 <h2 id="author-contributions">Author Contributions</h2>
@@ -705,153 +706,169 @@ GitHub<br />
 <div id="ref-EEOG2hnv">
 <p>49. <strong>Welcome to the tox automation project — tox 3.16.2.dev1 documentation</strong> <a href="https://tox.readthedocs.io/en/latest/">https://tox.readthedocs.io/en/latest/</a></p>
 </div>
+<div id="ref-62wYWRNT">
+<p>50. <strong>chemical-roles/chemical-roles</strong> <br />
+Chemical Roles<br />
+(2020-06-24) <a href="https://github.com/chemical-roles/chemical-roles">https://github.com/chemical-roles/chemical-roles</a></p>
+</div>
 <div id="ref-z7UPMWC1">
-<p>50. <strong>pyobo/pyobo</strong> <br />
+<p>51. <strong>pyobo/pyobo</strong> <br />
 GitHub<br />
 <a href="https://github.com/pyobo/pyobo">https://github.com/pyobo/pyobo</a></p>
 </div>
 <div id="ref-Wq2niICH">
-<p>51. <strong>Dovetailing biology and chemistry: integrating the Gene Ontology with the ChEBI chemical ontology.</strong> <br />
+<p>52. <strong>Dovetailing biology and chemistry: integrating the Gene Ontology with the ChEBI chemical ontology.</strong> <br />
 David P Hill, Nico Adams, Mike Bada, Colin Batchelor, Tanya Z Berardini, Heiko Dietze, Harold J Drabkin, Marcus Ennis, Rebecca E Foulger, Midori A Harris, … Jane Lomax<br />
 <em>BMC genomics</em> (2013-07-29) <a href="https://www.ncbi.nlm.nih.gov/pubmed/23895341">https://www.ncbi.nlm.nih.gov/pubmed/23895341</a> <br />
 DOI: <a href="https://doi.org/10.1186/1471-2164-14-513">10.1186/1471-2164-14-513</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23895341">23895341</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3733925">PMC3733925</a></p>
 </div>
 <div id="ref-Z3v18E4Q">
-<p>52. <strong>AmiGO 2: Term Details for “gliotoxin catabolic process” (GO:2001309)</strong> <a href="http://amigo.geneontology.org/amigo/term/GO:2001309">http://amigo.geneontology.org/amigo/term/GO:2001309</a></p>
+<p>53. <strong>AmiGO 2: Term Details for “gliotoxin catabolic process” (GO:2001309)</strong> <a href="http://amigo.geneontology.org/amigo/term/GO:2001309">http://amigo.geneontology.org/amigo/term/GO:2001309</a></p>
 </div>
 <div id="ref-x8ztKRsa">
-<p>53. <strong>gliotoxin (CHEBI:5385)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5385">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5385</a></p>
+<p>54. <strong>gliotoxin (CHEBI:5385)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5385">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5385</a></p>
 </div>
 <div id="ref-akdxNohe">
-<p>54. <strong>Gene Ontology Causal Activity Modeling (GO-CAM) moves beyond GO annotations to structured descriptions of biological functions and systems</strong> <br />
+<p>55. <strong>Gene Ontology Causal Activity Modeling (GO-CAM) moves beyond GO annotations to structured descriptions of biological functions and systems</strong> <br />
 Paul D. Thomas, David P. Hill, Huaiyu Mi, David Osumi-Sutherland, Kimberly Van Auken, Seth Carbon, James P. Balhoff, Laurent-Philippe Albou, Benjamin Good, Pascale Gaudet, … Christopher J. Mungall<br />
 <em>Nature Genetics</em> (2019-09-23) <a href="https://doi.org/ggcfst">https://doi.org/ggcfst</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41588-019-0500-1">10.1038/s41588-019-0500-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31548717">31548717</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7012280">PMC7012280</a></p>
 </div>
 <div id="ref-1EG14g1C7">
-<p>55. <strong>Dead simple OWL design patterns.</strong> <br />
+<p>56. <strong>Dead simple OWL design patterns.</strong> <br />
 David Osumi-Sutherland, Melanie Courtot, James P Balhoff, Christopher Mungall<br />
 <em>Journal of biomedical semantics</em> (2017-06-05) <a href="https://www.ncbi.nlm.nih.gov/pubmed/28583177">https://www.ncbi.nlm.nih.gov/pubmed/28583177</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13326-017-0126-0">10.1186/s13326-017-0126-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28583177">28583177</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5460348">PMC5460348</a></p>
 </div>
 <div id="ref-15Qajtku">
-<p>56. <strong>INCATools/ontology-development-kit</strong> <br />
+<p>57. <strong>INCATools/ontology-development-kit</strong> <br />
+INCATools<br />
+(2020-06-15) <a href="https://github.com/INCATools/ontology-development-kit">https://github.com/INCATools/ontology-development-kit</a></p>
+</div>
+<div id="ref-EcSZMNp4">
+<p>58. <strong>obophenotype/chiro</strong> <br />
 GitHub<br />
-<a href="https://github.com/INCATools/ontology-development-kit">https://github.com/INCATools/ontology-development-kit</a></p>
+<a href="https://github.com/obophenotype/chiro">https://github.com/obophenotype/chiro</a></p>
 </div>
 <div id="ref-LQwD4jIG">
-<p>57. <strong>Recent advances in modeling languages for pathway maps and computable biological networks.</strong> <br />
+<p>59. <strong>Recent advances in modeling languages for pathway maps and computable biological networks.</strong> <br />
 Ted Slater<br />
 <em>Drug discovery today</em> (2014-01-17) <a href="https://www.ncbi.nlm.nih.gov/pubmed/24444544">https://www.ncbi.nlm.nih.gov/pubmed/24444544</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.drudis.2013.12.011">10.1016/j.drudis.2013.12.011</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24444544">24444544</a></p>
 </div>
 <div id="ref-mZ5zqhmN">
-<p>58. <strong>Integration of Structured Biological Data Sources using Biological Expression Language</strong> <br />
+<p>60. <strong>Integration of Structured Biological Data Sources using Biological Expression Language</strong> <br />
 Charles Tapley Hoyt, Daniel Domingo-Fernández, Sarah Mubeen, Josep Marin Llaó, Andrej Konotopez, Christian Ebeling, Colin Birkenbihl, Özlem Muslu, Bradley English, Simon Müller, … Martin Hofmann-Apitius<br />
 <em>bioRxiv</em> (2019-05-08) <a href="https://doi.org/gg3kpq">https://doi.org/gg3kpq</a> <br />
 DOI: <a href="https://doi.org/10.1101/631812">10.1101/631812</a></p>
 </div>
 <div id="ref-oqV8WUtS">
-<p>59. <strong>PyBEL: a computational framework for Biological Expression Language.</strong> <br />
+<p>61. <strong>PyBEL: a computational framework for Biological Expression Language.</strong> <br />
 Charles Tapley Hoyt, Andrej Konotopez, Christian Ebeling, Jonathan Wren<br />
 <em>Bioinformatics (Oxford, England)</em> (2018-02-15) <a href="https://www.ncbi.nlm.nih.gov/pubmed/29048466">https://www.ncbi.nlm.nih.gov/pubmed/29048466</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btx660">10.1093/bioinformatics/btx660</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29048466">29048466</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860616">PMC5860616</a></p>
 </div>
+<div id="ref-4bupWs1X">
+<p>62. <strong>chemical-roles/chemical-roles v0.0.1</strong> <br />
+Charles Tapley Hoyt<br />
+<em>Zenodo</em> (2020-06-07) <a href="https://doi.org/gg3krx">https://doi.org/gg3krx</a> <br />
+DOI: <a href="https://doi.org/10.5281/zenodo.3883800">10.5281/zenodo.3883800</a></p>
+</div>
 <div id="ref-2yxCLP0Q">
-<p>60. <strong>anti-inflammatory drug (CHEBI:35472)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35472">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35472</a></p>
+<p>63. <strong>anti-inflammatory drug (CHEBI:35472)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35472">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35472</a></p>
 </div>
 <div id="ref-7EEVNeE7">
-<p>61. <strong>isobavachalcone (CHEBI:28106)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5984">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5984</a></p>
+<p>64. <strong>isobavachalcone (CHEBI:28106)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5984">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5984</a></p>
 </div>
 <div id="ref-LVypwCY1">
-<p>62. <strong>anti-HIV-1 agent (CHEBI:64947)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:64947">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:64947</a></p>
+<p>65. <strong>anti-HIV-1 agent (CHEBI:64947)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:64947">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:64947</a></p>
 </div>
 <div id="ref-NDEYLA8P">
-<p>63. <strong>antidote to opioid poisoning (CHEBI:90755)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90755">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90755</a></p>
+<p>66. <strong>antidote to opioid poisoning (CHEBI:90755)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90755">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90755</a></p>
 </div>
 <div id="ref-hJlcGJhC">
-<p>64. <strong>soluble guanylate cyclase activator (CHEBI:76022)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76022">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76022</a></p>
+<p>67. <strong>soluble guanylate cyclase activator (CHEBI:76022)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76022">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76022</a></p>
 </div>
 <div id="ref-11RI4ypVD">
-<p>65. <strong>UDP-glucuronosyltransferase activator (CHEBI:77324)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77324">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77324</a></p>
+<p>68. <strong>UDP-glucuronosyltransferase activator (CHEBI:77324)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77324">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77324</a></p>
 </div>
 <div id="ref-vTMMppnw">
-<p>66. <strong>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activator (CHEBI:85053)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85053">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85053</a></p>
+<p>69. <strong>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activator (CHEBI:85053)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85053">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85053</a></p>
 </div>
 <div id="ref-VYh9q5AT">
-<p>67. <strong>hypoxia-inducible factor pathway activator (CHEBI:134083)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:134083">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:134083</a></p>
+<p>70. <strong>hypoxia-inducible factor pathway activator (CHEBI:134083)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:134083">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:134083</a></p>
 </div>
 <div id="ref-lqOeNPfT">
-<p>68. <strong>Hsp70 inducer (CHEBI:78606)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:78606">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:78606</a></p>
+<p>71. <strong>Hsp70 inducer (CHEBI:78606)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:78606">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:78606</a></p>
 </div>
 <div id="ref-dSGCMmYN">
-<p>69. <strong>apoptosis inducer (CHEBI:68495)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:68495">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:68495</a></p>
+<p>72. <strong>apoptosis inducer (CHEBI:68495)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:68495">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:68495</a></p>
 </div>
 <div id="ref-ahvGL5xG">
-<p>70. <strong>interferon inducer (CHEBI:36710)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36710">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36710</a></p>
+<p>73. <strong>interferon inducer (CHEBI:36710)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36710">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36710</a></p>
 </div>
 <div id="ref-Q2pKxQ6v">
-<p>71. <strong>MTP inhibitor (CHEBI:72298)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72298">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72298</a></p>
+<p>74. <strong>MTP inhibitor (CHEBI:72298)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72298">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72298</a></p>
 </div>
 <div id="ref-QOZ8hBde">
-<p>72. <strong>eukaryotic initiation factor 4F inhibitor (CHEBI:137079)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137079">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137079</a></p>
+<p>75. <strong>eukaryotic initiation factor 4F inhibitor (CHEBI:137079)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137079">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137079</a></p>
 </div>
 <div id="ref-150SrGqRp">
-<p>73. <strong>glycine transporter inhibitor (CHEBI:85425)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85425">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85425</a></p>
+<p>76. <strong>glycine transporter inhibitor (CHEBI:85425)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85425">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:85425</a></p>
 </div>
 <div id="ref-1AiIy17J3">
-<p>74. <strong>EC 1.1.1.188 (prostaglandin-F synthase) inhibitor (CHEBI:77425)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77425">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77425</a></p>
+<p>77. <strong>EC 1.1.1.188 (prostaglandin-F synthase) inhibitor (CHEBI:77425)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77425">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77425</a></p>
 </div>
 <div id="ref-XB7nq9dG">
-<p>75. <strong>autophagy inhibitor (CHEBI:88230)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:88230">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:88230</a></p>
+<p>78. <strong>autophagy inhibitor (CHEBI:88230)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:88230">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:88230</a></p>
 </div>
 <div id="ref-17JALnNfQ">
-<p>76. <strong>aryl hydrocarbon receptor agonist (CHEBI:72768)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72768">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72768</a></p>
+<p>79. <strong>aryl hydrocarbon receptor agonist (CHEBI:72768)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72768">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72768</a></p>
 </div>
 <div id="ref-2BSjWA9p">
-<p>77. <strong>cannabinoid receptor agonist (CHEBI:67072)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:67072">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:67072</a></p>
+<p>80. <strong>cannabinoid receptor agonist (CHEBI:67072)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:67072">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:67072</a></p>
 </div>
 <div id="ref-5B3b0qsK">
-<p>78. <strong>aryl hydrocarbon receptor antagonist (CHEBI:76998)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76998">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76998</a></p>
+<p>81. <strong>aryl hydrocarbon receptor antagonist (CHEBI:76998)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76998">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:76998</a></p>
 </div>
 <div id="ref-tNy6r4sw">
-<p>79. <strong>cannabinoid receptor antagonist (CHEBI:73413)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:73413">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:73413</a></p>
+<p>82. <strong>cannabinoid receptor antagonist (CHEBI:73413)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:73413">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:73413</a></p>
 </div>
 <div id="ref-SCGuRBar">
-<p>80. <strong>5-hydroxytryptamine 2A receptor inverse agonist (CHEBI:133016)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:133016">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:133016</a></p>
+<p>83. <strong>5-hydroxytryptamine 2A receptor inverse agonist (CHEBI:133016)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:133016">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:133016</a></p>
 </div>
 <div id="ref-P5f386gT">
-<p>81. <strong>inverse agonist (CHEBI:90847)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90847">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90847</a></p>
+<p>84. <strong>inverse agonist (CHEBI:90847)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90847">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90847</a></p>
 </div>
 <div id="ref-19X3tgsMM">
-<p>82. <strong>retinoic acid receptor modulator (CHEBI:90708)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90708">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90708</a></p>
+<p>85. <strong>retinoic acid receptor modulator (CHEBI:90708)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90708">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90708</a></p>
 </div>
 <div id="ref-1277WJWO7">
-<p>83. <strong>gamma-secretase modulator (CHEBI:48668)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48668">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48668</a></p>
+<p>86. <strong>gamma-secretase modulator (CHEBI:48668)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48668">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48668</a></p>
 </div>
 <div id="ref-srHG0kix">
-<p>84. <strong>PPAR modulator (CHEBI:70781)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:70781">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:70781</a></p>
+<p>87. <strong>PPAR modulator (CHEBI:70781)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:70781">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:70781</a></p>
 </div>
 <div id="ref-biIG2RIi">
-<p>85. <strong>tubulin modulator (CHEBI:60832)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60832">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60832</a></p>
+<p>88. <strong>tubulin modulator (CHEBI:60832)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60832">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60832</a></p>
 </div>
 <div id="ref-Jc3KqdvH">
-<p>86. <strong>antiglaucoma drug (CHEBI:39456)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39456">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39456</a></p>
+<p>89. <strong>antiglaucoma drug (CHEBI:39456)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39456">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39456</a></p>
 </div>
 <div id="ref-LCpil348">
-<p>87. <strong>trypanocidal drug (CHEBI:36335)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36335">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36335</a></p>
+<p>90. <strong>trypanocidal drug (CHEBI:36335)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36335">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36335</a></p>
 </div>
 <div id="ref-gih0Z7QS">
-<p>88. <strong>tranquilizing drug (CHEBI:35473)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35473">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35473</a></p>
+<p>91. <strong>tranquilizing drug (CHEBI:35473)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35473">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35473</a></p>
 </div>
 <div id="ref-1A7GfkV4L">
-<p>89. <strong>antihypotensive agent (CHEBI:137431)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137431">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137431</a></p>
+<p>92. <strong>antihypotensive agent (CHEBI:137431)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137431">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:137431</a></p>
 </div>
 <div id="ref-9PhdjBOc">
-<p>90. <strong>VR nerve agent (CHEBI:140422)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:140422">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:140422</a></p>
+<p>93. <strong>VR nerve agent (CHEBI:140422)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:140422">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:140422</a></p>
 </div>
 <div id="ref-dZb96Vvu">
-<p>91. <strong>sensitiser (CHEBI:139492)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:139492">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:139492</a></p>
+<p>94. <strong>sensitiser (CHEBI:139492)</strong> <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:139492">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:139492</a></p>
 </div>
 </div>
 <h2 id="appendix">Appendix</h2>
@@ -859,9 +876,9 @@ DOI: <a href="https://doi.org/10.1093/bioinformatics/btx660">10.1093/bioinformat
 <table>
 <caption><span>Table 9:</span> Affixes used for initial targeted curation. In the first column, P corresponds to prefix, S to suffix, and A to both in the case of “EC-…-inhibitor/activator”. </caption>
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 70%" />
-<col style="width: 23%" />
+<col style="width: 1%" />
+<col style="width: 7%" />
+<col style="width: 91%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -872,89 +889,89 @@ DOI: <a href="https://doi.org/10.1093/bioinformatics/btx660">10.1093/bioinformat
 </thead>
 <tbody>
 <tr class="odd">
-<td>P</td>
+<td>Prefix</td>
 <td>anti-</td>
-<td>Various agents against biological processes (e.g., anti-inflammatory drug <span class="citation" data-cites="2yxCLP0Q">[<a href="#ref-2yxCLP0Q" role="doc-biblioref">60</a>]</span>), pathologies (e.g., antihyperplasia drug <span class="citation" data-cites="7EEVNeE7">[<a href="#ref-7EEVNeE7" role="doc-biblioref">61</a>]</span>), and organisms (e.g., anti-HIV-1 agent <span class="citation" data-cites="LVypwCY1">[<a href="#ref-LVypwCY1" role="doc-biblioref">62</a>]</span>).</td>
+<td>Various agents against biological processes (e.g., anti-inflammatory drug <span class="citation" data-cites="2yxCLP0Q">[<a href="#ref-2yxCLP0Q" role="doc-biblioref">63</a>]</span>), pathologies (e.g., antihyperplasia drug <span class="citation" data-cites="7EEVNeE7">[<a href="#ref-7EEVNeE7" role="doc-biblioref">64</a>]</span>), and organisms (e.g., anti-HIV-1 agent <span class="citation" data-cites="LVypwCY1">[<a href="#ref-LVypwCY1" role="doc-biblioref">65</a>]</span>).</td>
 </tr>
 <tr class="even">
-<td>P</td>
+<td>Prefix</td>
 <td>antidote to-</td>
-<td>Antidotes for poisons (e.g., antidote to opioid poisoning <span class="citation" data-cites="NDEYLA8P">[<a href="#ref-NDEYLA8P" role="doc-biblioref">63</a>]</span>).</td>
+<td>Antidotes for poisons (e.g., antidote to opioid poisoning <span class="citation" data-cites="NDEYLA8P">[<a href="#ref-NDEYLA8P" role="doc-biblioref">66</a>]</span>).</td>
 </tr>
 <tr class="odd">
-<td>A</td>
-<td>EC-…-inhibitor or EC-…- activator</td>
+<td>Both</td>
+<td>EC-…-inhibitor or -activator</td>
 <td>Inhibitors of enzymes. The ChEBI hierarchy of roles implicitly models the enzyme classification with the root term being enzyme inhibitor <span class="citation" data-cites="Sixp0icA">[<a href="#ref-Sixp0icA" role="doc-biblioref">20</a>]</span>. However, some terms have the suffix of -activator, which do not have corresponding roles nor a corresponding root term enzyme activator.</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-activator</td>
-<td>Activators of proteins (e.g., p53 activator <span class="citation" data-cites="ZYFeZhxw">[<a href="#ref-ZYFeZhxw" role="doc-biblioref">8</a>]</span>), protein complexes (e.g., soluble guanylate cyclase activator <span class="citation" data-cites="hJlcGJhC">[<a href="#ref-hJlcGJhC" role="doc-biblioref">64</a>]</span>), protein families (e.g., UDP-glucuronosyltransferase activator <span class="citation" data-cites="11RI4ypVD">[<a href="#ref-11RI4ypVD" role="doc-biblioref">65</a>]</span>), enzyme classes (e.g., EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activator <span class="citation" data-cites="vTMMppnw">[<a href="#ref-vTMMppnw" role="doc-biblioref">66</a>]</span>), pathways (e.g., hypoxia-inducible factor pathway activator <span class="citation" data-cites="VYh9q5AT">[<a href="#ref-VYh9q5AT" role="doc-biblioref">67</a>]</span>)</td>
+<td>Activators of proteins (e.g., p53 activator <span class="citation" data-cites="ZYFeZhxw">[<a href="#ref-ZYFeZhxw" role="doc-biblioref">8</a>]</span>), protein complexes (e.g., soluble guanylate cyclase activator <span class="citation" data-cites="hJlcGJhC">[<a href="#ref-hJlcGJhC" role="doc-biblioref">67</a>]</span>), protein families (e.g., UDP-glucuronosyltransferase activator <span class="citation" data-cites="11RI4ypVD">[<a href="#ref-11RI4ypVD" role="doc-biblioref">68</a>]</span>), enzyme classes (e.g., EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activator <span class="citation" data-cites="vTMMppnw">[<a href="#ref-vTMMppnw" role="doc-biblioref">69</a>]</span>), pathways (e.g., hypoxia-inducible factor pathway activator <span class="citation" data-cites="VYh9q5AT">[<a href="#ref-VYh9q5AT" role="doc-biblioref">70</a>]</span>)</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-inducer</td>
-<td>Inducers of protein families (e.g., Hsp70 inducer <span class="citation" data-cites="lqOeNPfT">[<a href="#ref-lqOeNPfT" role="doc-biblioref">68</a>]</span>), pathways (e.g. apoptosis inducer <span class="citation" data-cites="dSGCMmYN">[<a href="#ref-dSGCMmYN" role="doc-biblioref">69</a>]</span>). The difference in semantics between activator and inducer is unclear, and it seems that activator was preferred by ChEBI curators. Only three entries, interferon inducer <span class="citation" data-cites="ahvGL5xG">[<a href="#ref-ahvGL5xG" role="doc-biblioref">70</a>]</span> being the third, have this suffix.</td>
+<td>Inducers of protein families (e.g., Hsp70 inducer <span class="citation" data-cites="lqOeNPfT">[<a href="#ref-lqOeNPfT" role="doc-biblioref">71</a>]</span>), pathways (e.g. apoptosis inducer <span class="citation" data-cites="dSGCMmYN">[<a href="#ref-dSGCMmYN" role="doc-biblioref">72</a>]</span>). The difference in semantics between activator and inducer is unclear, and it seems that activator was preferred by ChEBI curators. Only three entries, interferon inducer <span class="citation" data-cites="ahvGL5xG">[<a href="#ref-ahvGL5xG" role="doc-biblioref">73</a>]</span> being the third, have this suffix.</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-inhibitor</td>
-<td>Inhibitors of proteins (e.g., MTP inhibitor <span class="citation" data-cites="Q2pKxQ6v">[<a href="#ref-Q2pKxQ6v" role="doc-biblioref">71</a>]</span>), protein complexes (e.g., eukaryotic initiation factor 4F inhibitor <span class="citation" data-cites="QOZ8hBde">[<a href="#ref-QOZ8hBde" role="doc-biblioref">72</a>]</span>), protein families (e.g. glycine transporter inhibitor <span class="citation" data-cites="150SrGqRp">[<a href="#ref-150SrGqRp" role="doc-biblioref">73</a>]</span>), enzyme classes (e.g., EC 1.1.1.188 (prostaglandin-F synthase) inhibitor <span class="citation" data-cites="1AiIy17J3">[<a href="#ref-1AiIy17J3" role="doc-biblioref">74</a>]</span>), pathways (e.g., autophagy inhibitor <span class="citation" data-cites="XB7nq9dG">[<a href="#ref-XB7nq9dG" role="doc-biblioref">75</a>]</span>)</td>
+<td>Inhibitors of proteins (e.g., MTP inhibitor <span class="citation" data-cites="Q2pKxQ6v">[<a href="#ref-Q2pKxQ6v" role="doc-biblioref">74</a>]</span>), protein complexes (e.g., eukaryotic initiation factor 4F inhibitor <span class="citation" data-cites="QOZ8hBde">[<a href="#ref-QOZ8hBde" role="doc-biblioref">75</a>]</span>), protein families (e.g. glycine transporter inhibitor <span class="citation" data-cites="150SrGqRp">[<a href="#ref-150SrGqRp" role="doc-biblioref">76</a>]</span>), enzyme classes (e.g., EC 1.1.1.188 (prostaglandin-F synthase) inhibitor <span class="citation" data-cites="1AiIy17J3">[<a href="#ref-1AiIy17J3" role="doc-biblioref">77</a>]</span>), pathways (e.g., autophagy inhibitor <span class="citation" data-cites="XB7nq9dG">[<a href="#ref-XB7nq9dG" role="doc-biblioref">78</a>]</span>)</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-agonist</td>
-<td>Agonists of proteins (e.g., aryl hydrocarbon receptor agonist <span class="citation" data-cites="17JALnNfQ">[<a href="#ref-17JALnNfQ" role="doc-biblioref">76</a>]</span>), protein families (e.g., cannabinoid receptor agonist <span class="citation" data-cites="2BSjWA9p">[<a href="#ref-2BSjWA9p" role="doc-biblioref">77</a>]</span>)</td>
+<td>Agonists of proteins (e.g., aryl hydrocarbon receptor agonist <span class="citation" data-cites="17JALnNfQ">[<a href="#ref-17JALnNfQ" role="doc-biblioref">79</a>]</span>), protein families (e.g., cannabinoid receptor agonist <span class="citation" data-cites="2BSjWA9p">[<a href="#ref-2BSjWA9p" role="doc-biblioref">80</a>]</span>)</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-antagonist</td>
-<td>Antagonists of proteins (e.g., aryl hydrocarbon receptor antagonist <span class="citation" data-cites="5B3b0qsK">[<a href="#ref-5B3b0qsK" role="doc-biblioref">78</a>]</span>), protein families (e.g., cannabinoid receptor antagonist <span class="citation" data-cites="tNy6r4sw">[<a href="#ref-tNy6r4sw" role="doc-biblioref">79</a>]</span>)</td>
+<td>Antagonists of proteins (e.g., aryl hydrocarbon receptor antagonist <span class="citation" data-cites="5B3b0qsK">[<a href="#ref-5B3b0qsK" role="doc-biblioref">81</a>]</span>), protein families (e.g., cannabinoid receptor antagonist <span class="citation" data-cites="tNy6r4sw">[<a href="#ref-tNy6r4sw" role="doc-biblioref">82</a>]</span>)</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-inverse agonist</td>
-<td>Inverse agonists of proteins (e.g., 5-hydroxytryptamine 2A receptor inverse agonist <span class="citation" data-cites="SCGuRBar">[<a href="#ref-SCGuRBar" role="doc-biblioref">80</a>]</span>), protein families (e.g., liver X receptor inverse agonist <span class="citation" data-cites="ZvFpJkk7">[<a href="#ref-ZvFpJkk7" role="doc-biblioref">45</a>]</span>). Unfortunately, these are the only two such entries. They both inherit from inverse agonist <span class="citation" data-cites="P5f386gT">[<a href="#ref-P5f386gT" role="doc-biblioref">81</a>]</span>.</td>
+<td>Inverse agonists of proteins (e.g., 5-hydroxytryptamine 2A receptor inverse agonist <span class="citation" data-cites="SCGuRBar">[<a href="#ref-SCGuRBar" role="doc-biblioref">83</a>]</span>), protein families (e.g., liver X receptor inverse agonist <span class="citation" data-cites="ZvFpJkk7">[<a href="#ref-ZvFpJkk7" role="doc-biblioref">45</a>]</span>). Unfortunately, these are the only two such entries. They both inherit from inverse agonist <span class="citation" data-cites="P5f386gT">[<a href="#ref-P5f386gT" role="doc-biblioref">84</a>]</span>.</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-modulator</td>
-<td>Modulators (lacking the polarity described by activators or inhibitors) of proteins (e.g., retinoic acid receptor modulator <span class="citation" data-cites="19X3tgsMM">[<a href="#ref-19X3tgsMM" role="doc-biblioref">82</a>]</span>), protein complexes (e.g., γ-secretase modulator <span class="citation" data-cites="1277WJWO7">[<a href="#ref-1277WJWO7" role="doc-biblioref">83</a>]</span>), protein families (e.g., PPAR modulator <span class="citation" data-cites="srHG0kix">[<a href="#ref-srHG0kix" role="doc-biblioref">84</a>]</span>), cellular components (e.g., tubulin modulator <span class="citation" data-cites="biIG2RIi">[<a href="#ref-biIG2RIi" role="doc-biblioref">85</a>]</span>)</td>
+<td>Modulators (lacking the polarity described by activators or inhibitors) of proteins (e.g., retinoic acid receptor modulator <span class="citation" data-cites="19X3tgsMM">[<a href="#ref-19X3tgsMM" role="doc-biblioref">85</a>]</span>), protein complexes (e.g., γ-secretase modulator <span class="citation" data-cites="1277WJWO7">[<a href="#ref-1277WJWO7" role="doc-biblioref">86</a>]</span>), protein families (e.g., PPAR modulator <span class="citation" data-cites="srHG0kix">[<a href="#ref-srHG0kix" role="doc-biblioref">87</a>]</span>), cellular components (e.g., tubulin modulator <span class="citation" data-cites="biIG2RIi">[<a href="#ref-biIG2RIi" role="doc-biblioref">88</a>]</span>)</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-suppressor / -suppressant</td>
 <td>Like -inducer, there are only a handful of examples. The preferred suffix is -inhibitor</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-deactivator</td>
 <td>Surprisingly, there were no terms in ChEBI using this suffix</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-drug</td>
-<td>Drugs treating pathways (e.g., anti-inflammatory drug <span class="citation" data-cites="2yxCLP0Q">[<a href="#ref-2yxCLP0Q" role="doc-biblioref">60</a>]</span>), pathologies (e.g., antiglaucoma drug <span class="citation" data-cites="Jc3KqdvH">[<a href="#ref-Jc3KqdvH" role="doc-biblioref">86</a>]</span>), infections (e.g., trypanocidal drug <span class="citation" data-cites="LCpil348">[<a href="#ref-LCpil348" role="doc-biblioref">87</a>]</span>), and psychoses (e.g., tranquilizing drug <span class="citation" data-cites="gih0Z7QS">[<a href="#ref-gih0Z7QS" role="doc-biblioref">88</a>]</span>). However, most drugs treating psychoses are children of central nervous system drug <span class="citation" data-cites="yumMH8JO">[<a href="#ref-yumMH8JO" role="doc-biblioref">36</a>]</span> and do not end in the suffix -drug.</td>
+<td>Drugs treating pathways (e.g., anti-inflammatory drug <span class="citation" data-cites="2yxCLP0Q">[<a href="#ref-2yxCLP0Q" role="doc-biblioref">63</a>]</span>), pathologies (e.g., antiglaucoma drug <span class="citation" data-cites="Jc3KqdvH">[<a href="#ref-Jc3KqdvH" role="doc-biblioref">89</a>]</span>), infections (e.g., trypanocidal drug <span class="citation" data-cites="LCpil348">[<a href="#ref-LCpil348" role="doc-biblioref">90</a>]</span>), and psychoses (e.g., tranquilizing drug <span class="citation" data-cites="gih0Z7QS">[<a href="#ref-gih0Z7QS" role="doc-biblioref">91</a>]</span>). However, most drugs treating psychoses are children of central nervous system drug <span class="citation" data-cites="yumMH8JO">[<a href="#ref-yumMH8JO" role="doc-biblioref">36</a>]</span> and do not end in the suffix -drug.</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-agent</td>
-<td>Agents cover a wide variety of biology from drugs (e.g., antihypotensive agent <span class="citation" data-cites="1A7GfkV4L">[<a href="#ref-1A7GfkV4L" role="doc-biblioref">89</a>]</span>) to toxins/poisons (e.g., VR nerve agent <span class="citation" data-cites="9PhdjBOc">[<a href="#ref-9PhdjBOc" role="doc-biblioref">90</a>]</span>) and other applications.</td>
+<td>Agents cover a wide variety of biology from drugs (e.g., antihypotensive agent <span class="citation" data-cites="1A7GfkV4L">[<a href="#ref-1A7GfkV4L" role="doc-biblioref">92</a>]</span>) to toxins/poisons (e.g., VR nerve agent <span class="citation" data-cites="9PhdjBOc">[<a href="#ref-9PhdjBOc" role="doc-biblioref">93</a>]</span>) and other applications.</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-stabilizer / -stabiliser</td>
 <td>This search was included because of the notes from ChIRO, but no terms in ChEBI corresponded to it.</td>
 </tr>
 <tr class="even">
-<td>S</td>
+<td>Suffix</td>
 <td>-destabilizer / -destabiliser</td>
 <td>This search was included because of the notes from ChIRO, but no terms in ChEBI corresponded to it.</td>
 </tr>
 <tr class="odd">
-<td>S</td>
+<td>Suffix</td>
 <td>-sensitizer / -sensitiser</td>
-<td>This search was included because of the notes from ChIRO, but no terms in ChEBI had this suffix besides the role sensitiser <span class="citation" data-cites="dZb96Vvu">[<a href="#ref-dZb96Vvu" role="doc-biblioref">91</a>]</span></td>
+<td>This search was included because of the notes from ChIRO, but no terms in ChEBI had this suffix besides the role sensitiser <span class="citation" data-cites="dZb96Vvu">[<a href="#ref-dZb96Vvu" role="doc-biblioref">94</a>]</span></td>
 </tr>
 </tbody>
 </table>

@@ -5,7 +5,7 @@ aminobutyric
 antiglaucoma
 antihyperplasia
 antihypotensive
-Arrythmia
+arrythmia
 arxiv
 aryl
 autophagy
@@ -13,11 +13,11 @@ axiomatization
 axiomatized
 axiomize
 Batchelor
-BEL
+bel
 cannabinoid
 catabolism
 CBL
-ChEBI
+CHEBI
 ChEBI’s
 ChIRO
 chrismungall

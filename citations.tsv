@@ -48,6 +48,7 @@ HGNC:7966	HGNC:7966	hgnc:7966	Of4IO7NK
 HGNC:7965	HGNC:7965	hgnc:7965	15Lq0Zsj4
 https://geneontology.org/ontology/external2go/ec2go	https://geneontology.org/ontology/external2go/ec2go	url:https://geneontology.org/ontology/external2go/ec2go	78Lvrkgg
 https://tox.readthedocs.io	https://tox.readthedocs.io	url:https://tox.readthedocs.io	EEOG2hnv
+https://github.com/chemical-roles/chemical-roles	https://github.com/chemical-roles/chemical-roles	url:https://github.com/chemical-roles/chemical-roles	62wYWRNT
 https://github.com/pyobo/pyobo	https://github.com/pyobo/pyobo	url:https://github.com/pyobo/pyobo	z7UPMWC1
 pubmed:23895341	pubmed:23895341	pubmed:23895341	Wq2niICH
 GO:2001309	GO:2001309	go:2001309	Z3v18E4Q
@@ -55,9 +56,11 @@ CHEBI:5385	CHEBI:5385	chebi:5385	x8ztKRsa
 doi:10.1038/s41588-019-0500-1	doi:10.1038/s41588-019-0500-1	doi:10.1038/s41588-019-0500-1	akdxNohe
 pubmed:28583177	pubmed:28583177	pubmed:28583177	1EG14g1C7
 https://github.com/INCATools/ontology-development-kit	https://github.com/INCATools/ontology-development-kit	url:https://github.com/INCATools/ontology-development-kit	15Qajtku
+https://github.com/obophenotype/chiro/tree/master/src/patterns	https://github.com/obophenotype/chiro/tree/master/src/patterns	url:https://github.com/obophenotype/chiro/tree/master/src/patterns	EcSZMNp4
 pubmed:24444544	pubmed:24444544	pubmed:24444544	LQwD4jIG
 doi:10.1101/631812	doi:10.1101/631812	doi:10.1101/631812	mZ5zqhmN
 pubmed:29048466	pubmed:29048466	pubmed:29048466	oqV8WUtS
+doi:10.5281/zenodo.3883800	doi:10.5281/zenodo.3883800	doi:10.5281/zenodo.3883800	4bupWs1X
 CHEBI:35472	CHEBI:35472	chebi:35472	2yxCLP0Q
 CHEBI:5984	CHEBI:5984	chebi:5984	7EEVNeE7
 CHEBI:64947	CHEBI:64947	chebi:64947	LVypwCY1
