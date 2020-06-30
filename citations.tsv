@@ -26,7 +26,6 @@ CHEBI:65259	CHEBI:65259	chebi:65259	d7uxxgS
 hgnc.genefamily:562	hgnc.genefamily:562	hgnc.genefamily:562	CRGyL62
 CHEBI:16865	CHEBI:16865	chebi:16865	lriKYpcD
 CHEBI:78248	CHEBI:78248	chebi:78248	1EOeBqxIL
-http://www.obofoundry.org	http://www.obofoundry.org	url:http://www.obofoundry.org	B9Ej2xAj
 doi:10.1186/s12859-018-2211-5	doi:10.1186/s12859-018-2211-5	doi:10.1186/s12859-018-2211-5	YishMGoz
 https://github.com/indralab/gilda	https://github.com/indralab/gilda	url:https://github.com/indralab/gilda	9UQtTkyz
 https://github.com/ebi-chebi/ChEBI/issues	https://github.com/ebi-chebi/ChEBI/issues	url:https://github.com/ebi-chebi/ChEBI/issues	kyXDs6dx
@@ -39,6 +38,7 @@ CHEBI:35470	CHEBI:35470	chebi:35470	yumMH8JO
 CHEBI:50247	CHEBI:50247	chebi:50247	YBtfyXIY
 CHEBI:35488	CHEBI:35488	chebi:35488	F8NtQDZ7
 CHEBI:51087	CHEBI:51087	chebi:51087	sSAJ1zoC
+CHEBI:37958	CHEBI:37958	chebi:37958	tR7gzoaa
 CHEBI:64345	CHEBI:64345	chebi:64345	kDeB5oD5
 CHEBI:50188	CHEBI:50188	chebi:50188	3zLXVrDS
 CHEBI:24850	CHEBI:24850	chebi:24850	6sCht66w
@@ -49,15 +49,15 @@ HGNC:7965	HGNC:7965	hgnc:7965	15Lq0Zsj4
 https://geneontology.org/ontology/external2go/ec2go	https://geneontology.org/ontology/external2go/ec2go	url:https://geneontology.org/ontology/external2go/ec2go	78Lvrkgg
 https://tox.readthedocs.io	https://tox.readthedocs.io	url:https://tox.readthedocs.io	EEOG2hnv
 https://github.com/pyobo/pyobo	https://github.com/pyobo/pyobo	url:https://github.com/pyobo/pyobo	z7UPMWC1
-doi:10.1186/1471-2164-14-513	doi:10.1186/1471-2164-14-513	doi:10.1186/1471-2164-14-513	SxTfPkN9
+pubmed:23895341	pubmed:23895341	pubmed:23895341	Wq2niICH
 GO:2001309	GO:2001309	go:2001309	Z3v18E4Q
 CHEBI:5385	CHEBI:5385	chebi:5385	x8ztKRsa
 doi:10.1038/s41588-019-0500-1	doi:10.1038/s41588-019-0500-1	doi:10.1038/s41588-019-0500-1	akdxNohe
-doi:10.1186/s13326-017-0126-0	doi:10.1186/s13326-017-0126-0	doi:10.1186/s13326-017-0126-0	7mgOHyWm
+pubmed:28583177	pubmed:28583177	pubmed:28583177	1EG14g1C7
 https://github.com/INCATools/ontology-development-kit	https://github.com/INCATools/ontology-development-kit	url:https://github.com/INCATools/ontology-development-kit	15Qajtku
-doi:10.1016/j.drudis.2013.12.011	doi:10.1016/j.drudis.2013.12.011	doi:10.1016/j.drudis.2013.12.011	11W3tHiHT
-doi:10.1093/bioinformatics/btx660	doi:10.1093/bioinformatics/btx660	doi:10.1093/bioinformatics/btx660	NRvOOgdQ
-ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Monthly/2020-04-01/Extras/MeSH-Pharm	ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Monthly/2020-04-01/Extras/MeSH-Pharm	ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Monthly/2020-04-01/Extras/MeSH-Pharm	BswYvR7A
+pubmed:24444544	pubmed:24444544	pubmed:24444544	LQwD4jIG
+doi:10.1101/631812	doi:10.1101/631812	doi:10.1101/631812	mZ5zqhmN
+pubmed:29048466	pubmed:29048466	pubmed:29048466	oqV8WUtS
 CHEBI:35472	CHEBI:35472	chebi:35472	2yxCLP0Q
 CHEBI:5984	CHEBI:5984	chebi:5984	7EEVNeE7
 CHEBI:64947	CHEBI:64947	chebi:64947	LVypwCY1

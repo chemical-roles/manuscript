@@ -5,7 +5,7 @@ aminobutyric
 antiglaucoma
 antihyperplasia
 antihypotensive
-arrythmia
+Arrythmia
 arxiv
 aryl
 autophagy
@@ -13,11 +13,11 @@ axiomatization
 axiomatized
 axiomize
 Batchelor
-bel
+BEL
 cannabinoid
 catabolism
 CBL
-ChEBI
+CHEBI
 ChEBI’s
 ChIRO
 chrismungall
@@ -27,7 +27,7 @@ Colluru
 correspondsTo
 CTH
 cthoyt
-curation
+Curation
 cyclase
 DDF
 ddomingof
@@ -72,7 +72,7 @@ MTP
 Mungall
 NADPH
 nicolevasilevsky
-obo
+OBO
 oborel
 ODK
 ontologies

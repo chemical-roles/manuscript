@@ -11,6 +11,7 @@ content/02.extension.md:1:ChEBI
 content/02.extension.md:3:chebi
 content/02.extension.md:4:obo
 content/02.extension.md:5:hgnc
+content/02.extension.md:5:HGNC
 content/02.extension.md:6:chebi
 content/02.extension.md:6:chebi
 content/02.extension.md:6:chebi
