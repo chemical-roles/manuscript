@@ -17,6 +17,7 @@ authors:
   - name: Christopher J Mungall
     initials: CJM
     orcid: 0000-0002-6601-2165
+    twitter: chrismungall
     github: cmungall
     affiliations:
       - Division of Environmental Genomics and Systems Biology, Lawrence Berkeley National Laboratory, Berkeley, CA, USA
@@ -24,6 +25,7 @@ authors:
     initials: NV
     orcid: 0000-0001-5208-3432
     github: nicolevasilevsky
+    twitter: N_Vasilevsky
     affilitations:
       - Oregon Health & Science University, Portland, OR 97239, USA
   - name: Daniel Domingo-Fernández
