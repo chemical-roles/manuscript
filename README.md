@@ -14,6 +14,12 @@ and their targets.
 All code and data is available at https://github.com/chemical-roles/chemical-roles under
 the MIT License for code and CC0 for curated content.
 
+## Citation
+
+[**Extension of Roles in the ChEBI Ontology**](https://doi.org/10.26434/chemrxiv.12591221).
+<br />Hoyt, C. T., Mungall, C., Vasilevsky, N., Domingo-Fernández, D., Healy, M., and Colluru, V. (2020).
+<br />*chemRxiv*, 12591221.
+
 ## Manubot
 
 <!-- usage note: do not edit this section -->
