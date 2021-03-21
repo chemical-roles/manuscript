@@ -13,6 +13,7 @@ authors:
     twitter: cthoyt
     email: cthoyt@gmail.com
     affiliations:
+      - Laboratory of Systems Pharmacology, Harvard Medical School, Boston, MA, USA
       - Enveda Biosciences
   - name: Christopher J Mungall
     initials: CJM
@@ -32,7 +33,7 @@ authors:
     initials: DDF
     github: ddomingof
     orcid: 0000-0002-2046-6145
-    twitter: daniel_sunday
+    twitter: ddomingof
     affiliations:
       - Enveda Biosciences
   - name: Matthew Healy
@@ -40,8 +41,10 @@ authors:
     orcid: 0000-0001-6439-5038
     affiliations:
       - Enveda Biosciences
+    github: MatthewDHealy
   - name: Viswa Colluru
     initials: VC
     orcid: 0000-0002-6208-9288
+    github: vcolluru
     affiliations:
       - Enveda Biosciences
